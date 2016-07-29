@@ -53,7 +53,7 @@ exports.handler = function(event, context, cb) {
     }
 
     // determine the filename for our dump file, using the current date
-    var timestamp = moment().format('DD-MM-YYYY@HH-mm-ss')
+    var timestamp = moment().format('YYYY-MM-DD@HH-mm-ss')
     var day = moment().format('YYYY-MM-DD')
     var filename = format('{}-{}.backup', env.PGDATABASE, timestamp)
 
